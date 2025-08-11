@@ -1,0 +1,79 @@
+#!/usr/bin/python3
+
+
+def count_vowels(text): # Defines the function that takes 1 string argument
+    """
+    A function to count upper & lowercase vowels in a string
+
+    This Function counts the number of uppercase and lowercase vowels in a
+    given string and prints out the values to the Python console.
+    """
+    upr_vowels = ('A', 'E', 'I', 'O', 'U') # A tuple of Uppercase vowels
+    lwr_vowels = ('a', 'e', 'i', 'o', 'u') # A tuple of Lowercase vowels
+    upr_count = 0   # Initiates a counter for uppercase vowels
+    lwr_count = 0   # Initiates a counter for lowercase vowels
+
+    for char in text:   # Loop iterates through 'char'acters in the 'text'
+        if char in upr_vowels:      # Checks if 'char' is an uppercase vowel
+            upr_count += 1          # If so, add one to uppercase vowel count
+        elif char in lwr_vowels:    # Checks if 'char' is a lowercase vowel
+            lwr_count += 1          # If so, add one to lowercase vowel count
+
+    print(f'Number of uppercase vowels: {upr_count}')   # Prints the number
+                                                        # of uppercase vowels
+    print(f'Number of lowercase vowels: {lwr_count}')   # Prints the number
+                                                        # of lowercase vowels
+
+
+# The following lines are my test inputs and expected results:
+
+# test_1 = count_vowels('aAbBcCdDeE')   # Expect: 2 upr & 2 lwr
+# test_2 = count_vowels ('I Use An Umbrella In The Rain')
+                                        # Expect: 5 upr, 6 lwr
+# test_3 = count_vowels ('''Eveready Batteries Are Good At
+#                           Powering Everyday Objects''')
+                                        # Expect: Upr 5, lwr 16
+
+# The poem 'Jabberwocky', by Lewis Carroll
+jabberwocky =   """’Twas brillig, and the slithy toves
+                    Did gyre and gimble in the wabe:
+                    All mimsy were the borogoves,
+                    And the mome raths outgrabe.
+
+                    “Beware the Jabberwock, my son!
+                    The jaws that bite, the claws that catch!
+                    Beware the Jubjub bird, and shun
+                    The frumious Bandersnatch!”
+
+                    He took his vorpal sword in hand;
+                    Long time the manxome foe he sought—
+                    So rested he by the Tumtum tree
+                    And stood awhile in thought.
+
+                    And, as in uffish thought he stood,
+                    The Jabberwock, with eyes of flame,
+                    Came whiffling through the tulgey wood,
+                    And burbled as it came!
+
+                    One, two! One, two! And through and through
+                    The vorpal blade went snicker-snack!
+                    He left it dead, and with its head
+                    He went galumphing back.
+
+                    “And hast thou slain the Jabberwock?
+                    Come to my arms, my beamish boy!
+                    O frabjous day! Callooh! Callay!”
+                    He chortled in his joy.
+
+                    ’Twas brillig, and the slithy toves
+                    Did gyre and gimble in the wabe:
+                    All mimsy were the borogoves,
+                    And the mome raths outgrabe."""
+
+count_vowels(jabberwocky)   # This line feeds the poem above into the function to
+                            # count the upper and lowercase vowels in the poem.
+print(count_vowels)
+
+
+
+
